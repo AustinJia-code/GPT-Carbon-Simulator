@@ -12,9 +12,9 @@ public class Model{
     }
 
     public double getEstimatedRuntime(){
-        return averageRuntime+ Math.floor(Math.floor(Math.random() * runtimeError * 200f) / 100 - runtimeError);
+        return averageRuntime + Math.random() * runtimeError * 2 - runtimeError;
     }
     public double getEstimatedCarbonOutput(){
-        return averageCarbonOutput + Math.floor(Math.floor(Math.random() * carbonError * 200f) / 100 - carbonError);
+        return averageCarbonOutput + Math.random() * carbonError * 2 - carbonError;
     }
 }

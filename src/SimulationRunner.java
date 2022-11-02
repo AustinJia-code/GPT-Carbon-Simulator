@@ -8,8 +8,10 @@ import java.util.TreeMap;
 public class SimulationRunner {
     public static void main(String[] args) throws FileNotFoundException {
         int requestCount = 1000;
-        Model[] models = {new Model("GPT13B", 20, 10, 2, 2),
-                          new Model("GPT2", 10, 5, 2, 2)};
+
+        //carbon output in tons e-6
+        Model[] models = {new Model("GPT13B", 17, 1.5f, 3, 0.5f),
+                          new Model("GENGPT2", 10, 0.5f, 3, 0.5f)};
 
         CSVReader austinData = new CSVReader("ERCOT_AUSTIN_2022-03_MOER.txt");
 
@@ -42,8 +44,8 @@ public class SimulationRunner {
                     notOptimized += models[0].getEstimatedCarbonOutput();
                 }
             }
-            System.out.println("Optimized: " + optimized);
-            System.out.println("Not Optimized: " + notOptimized);
+            System.out.println("Optimized: " + (Math.round(optimized*100)/100f));
+            System.out.println("Not Optimized: " + (Math.round(notOptimized*100)/100f));
         }
     }
 }

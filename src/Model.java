@@ -1,5 +1,6 @@
 public class Model{
 
+    public String toCSV;
     private String modelName;
     private float averageRuntime, averageCarbonOutput, runtimeError, carbonError;
 
@@ -16,5 +17,8 @@ public class Model{
     }
     public double getEstimatedCarbonOutput(){
         return averageCarbonOutput + Math.random() * carbonError * 2 - carbonError;
+    }
+    public String toCSV(){
+        return modelName + "," + averageRuntime + "," + averageCarbonOutput + "," + runtimeError + "," + carbonError;
     }
 }

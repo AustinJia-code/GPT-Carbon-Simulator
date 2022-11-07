@@ -33,4 +33,8 @@ public class Request {
         return MOER;
     }
 
+    public String toCSV(){
+        return timestamp.toCSV() + "," + prompt + "," + model.toCSV() + "," + data.toCSV();
+    }
+
 }

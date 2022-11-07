@@ -41,6 +41,10 @@ public class Timestamp implements Comparable<Timestamp> {
         return year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
     }
 
+    public String toCSV(){
+        return year + "-" + month + "-" + day + "," + hour + ":" + minute + ":" + second;
+    }
+
     public int getYear(){
         return year;
     }

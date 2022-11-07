@@ -15,4 +15,8 @@ public class MOERData {
     public String toString(){
         return timestamp + " " + MOER + " " + MOERVersion + " " + frequency;
     }
+
+    public String toCSV(){
+        return timestamp + "," + MOER + "," + MOERVersion + "," + frequency;
+    }
 }

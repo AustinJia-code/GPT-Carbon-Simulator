@@ -38,11 +38,11 @@ public class Timestamp implements Comparable<Timestamp> {
     }
 
     public String toString() {
-        return year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
+        return year + "-" + month + "-" + day + "T" + hour + ":" + minute + ":" + second;
     }
 
     public String toCSV(){
-        return year + "-" + month + "-" + day + "," + hour + ":" + minute + ":" + second;
+        return year + "-" + month + "-" + day + "T" + hour + ":" + minute + ":" + second;
     }
 
     public int getYear(){

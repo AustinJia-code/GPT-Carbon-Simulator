@@ -1,13 +1,15 @@
+package StorageClasses;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
 public class CSVReader {
-    HashMap<Timestamp, MOERData> data;
+    TreeMap<Timestamp, MOERData> data;
 
     public CSVReader(String fileName) throws FileNotFoundException {
         Scanner scan = new Scanner(new File(fileName));
-        data = new HashMap<>();
+        data = new TreeMap<>();
 
         scan.nextLine();
         while(scan.hasNext()){
@@ -48,7 +50,7 @@ public class CSVReader {
         return total / data.keySet().size();
     }
 
-    public HashMap<Timestamp, MOERData> getData() {
+    public TreeMap<Timestamp, MOERData> getData() {
         return data;
     }
 

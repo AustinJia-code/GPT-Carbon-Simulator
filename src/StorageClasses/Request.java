@@ -1,3 +1,5 @@
+package StorageClasses;
+
 public class Request {
     private String prompt;
     private Model model;

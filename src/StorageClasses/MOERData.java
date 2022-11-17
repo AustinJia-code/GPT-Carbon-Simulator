@@ -1,3 +1,5 @@
+package StorageClasses;
+
 public class MOERData {
     private Timestamp timestamp;
     private float MOER, MOERVersion, frequency;

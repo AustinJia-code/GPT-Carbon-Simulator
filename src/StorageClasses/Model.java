@@ -1,3 +1,5 @@
+package StorageClasses;
+
 public class Model{
 
     public String toCSV;

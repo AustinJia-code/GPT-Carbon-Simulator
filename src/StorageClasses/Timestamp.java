@@ -1,3 +1,5 @@
+package StorageClasses;
+
 public class Timestamp implements Comparable<Timestamp> {
     private int year, month, day, hour, minute, second;
     public Timestamp(int year, int month, int day, int hour, int minute, int second){
@@ -38,7 +40,7 @@ public class Timestamp implements Comparable<Timestamp> {
     }
 
     public String toString() {
-        return year + "-" + month + "-" + day + "T" + hour + ":" + minute + ":" + second;
+        return year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
     }
 
     public String toCSV(){

@@ -28,7 +28,7 @@ public class SimulationRunnerLocation {
         CSVReader austinData = new CSVReader("ERCOT_AUSTIN_2022-08_MOER.txt");
         CSVReader calData = new CSVReader("CAISO_NORTH_2022-08_MOER.txt");
 
-        //TreeMap<Timestamp, ArrayList<Request>> simulatedMonth = generateRequests(10000, models, austinData);
+        //TreeMap<Timestamp, ArrayList<Request>> simulatedMonth = generateRequests(1000, models, austinData);
         TreeMap<StorageClasses.Timestamp, ArrayList<StorageClasses.Request>> simulatedMonth = readRequests("Requests.txt", austinData);
 
         float optimized = 0f;
@@ -57,6 +57,8 @@ public class SimulationRunnerLocation {
                     notOptimized += carbon;
                 }
             }
+            System.out.println("Optimized: " + (Math.round(optimized*100)/100f));
+            System.out.println("Not Optimized: " + (Math.round(notOptimized*100)/100f));
         }
         //System.out.println(t + " " + location);
         System.out.println("Optimized: " + (Math.round(optimized*100)/100f));

@@ -61,8 +61,8 @@ public class SimulationRunnerLocation {
             System.out.println("Not Optimized: " + (Math.round(notOptimized*100)/100f));
         }
         //System.out.println(t + " " + location);
-        System.out.println("Optimized: " + (Math.round(optimized*100)/100f));
-        System.out.println("Not Optimized: " + (Math.round(notOptimized*100)/100f));
+        System.out.println("Optimized (g): " + (Math.round(optimized*100)/100f));
+        System.out.println("Not Optimized (g): " + (Math.round(notOptimized*100)/100f));
     }
 
     private static TreeMap<Timestamp, ArrayList<Request>> readRequests(String fileName, CSVReader data) throws FileNotFoundException {
